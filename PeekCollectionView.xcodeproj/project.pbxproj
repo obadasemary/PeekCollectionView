@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		AFBB32E622DE3A4F00EA7BCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB32E522DE3A4F00EA7BCD /* AppDelegate.swift */; };
-		AFBB32E822DE3A4F00EA7BCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB32E722DE3A4F00EA7BCD /* ViewController.swift */; };
+		AFBB32E822DE3A4F00EA7BCD /* PeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB32E722DE3A4F00EA7BCD /* PeekViewController.swift */; };
 		AFBB32EB22DE3A4F00EA7BCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFBB32E922DE3A4F00EA7BCD /* Main.storyboard */; };
 		AFBB32ED22DE3A5100EA7BCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFBB32EC22DE3A5100EA7BCD /* Assets.xcassets */; };
 		AFBB32F022DE3A5100EA7BCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFBB32EE22DE3A5100EA7BCD /* LaunchScreen.storyboard */; };
+		AFBB32F922DF22EB00EA7BCD /* PeekCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB32F722DF22EB00EA7BCD /* PeekCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AFBB32E222DE3A4F00EA7BCD /* PeekCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeekCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFBB32E522DE3A4F00EA7BCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AFBB32E722DE3A4F00EA7BCD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AFBB32E722DE3A4F00EA7BCD /* PeekViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeekViewController.swift; sourceTree = "<group>"; };
 		AFBB32EA22DE3A4F00EA7BCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFBB32EC22DE3A5100EA7BCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFBB32EF22DE3A5100EA7BCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFBB32F122DE3A5100EA7BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFBB32F722DF22EB00EA7BCD /* PeekCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeekCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				AFBB32E522DE3A4F00EA7BCD /* AppDelegate.swift */,
-				AFBB32E722DE3A4F00EA7BCD /* ViewController.swift */,
+				AFBB32F722DF22EB00EA7BCD /* PeekCollectionViewCell.swift */,
+				AFBB32E722DE3A4F00EA7BCD /* PeekViewController.swift */,
 				AFBB32E922DE3A4F00EA7BCD /* Main.storyboard */,
 				AFBB32EC22DE3A5100EA7BCD /* Assets.xcassets */,
 				AFBB32EE22DE3A5100EA7BCD /* LaunchScreen.storyboard */,
@@ -135,8 +138,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFBB32E822DE3A4F00EA7BCD /* ViewController.swift in Sources */,
+				AFBB32E822DE3A4F00EA7BCD /* PeekViewController.swift in Sources */,
 				AFBB32E622DE3A4F00EA7BCD /* AppDelegate.swift in Sources */,
+				AFBB32F922DF22EB00EA7BCD /* PeekCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
