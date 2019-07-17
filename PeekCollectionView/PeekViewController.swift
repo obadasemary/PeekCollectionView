@@ -36,6 +36,16 @@ class PeekViewController: UIViewController, UICollectionViewDataSource, UICollec
 
         collectionView.delegate = self
         collectionView.dataSource = self
+
+        addNavBarImage()
+    }
+
+    func addNavBarImage() {
+        let imageView = UIImageView(frame: (CGRect(x: 0, y: 0, width: 40, height: 40)))
+        imageView.contentMode = .scaleAspectFit
+        let image = UIImage (named: "vngrs_red_logo")
+        imageView.image = image
+        self.navigationItem.titleView = imageView
     }
 
     // MARK: - UICollectionView
