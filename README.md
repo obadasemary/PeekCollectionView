@@ -32,5 +32,6 @@ you can check these two links
 <h1></h1>
 
 
+![](https://github.com/obadasemary/PeekCollectionView/blob/master/PeekCollectionViewSwift%20GIF-downsized_large.gif)
 <img src="https://github.com/obadasemary/PeekCollectionView/blob/master/Simulator%20Screen%20Shot%20-%20iPhone%20Xs%20Max%20-%202019-07-17%20at%2018.51.58.png" alt="HTML5 Icon" width="276" height="598">      <img src="https://github.com/obadasemary/PeekCollectionView/blob/master/Simulator%20Screen%20Shot%20-%20iPhone%20Xs%20Max%20-%202019-07-17%20at%2018.52.03.png" alt="HTML5 Icon" width="276" height="598">      <img src="https://github.com/obadasemary/PeekCollectionView/blob/master/Simulator%20Screen%20Shot%20-%20iPhone%20Xs%20Max%20-%202019-07-17%20at%2018.52.10.png" alt="HTML5 Icon" width="276" height="598">      <img src="https://github.com/obadasemary/PeekCollectionView/blob/master/Simulator%20Screen%20Shot%20-%20iPhone%20Xs%20Max%20-%202019-07-17%20at%2018.57.59.png" alt="HTML5 Icon" width="276" height="598">      <img src="https://github.com/obadasemary/PeekCollectionView/blob/master/Simulator%20Screen%20Shot%20-%20iPhone%20Xs%20Max%20-%202019-07-17%20at%2018.58.04.png" alt="HTML5 Icon" width="276" height="598">
 
