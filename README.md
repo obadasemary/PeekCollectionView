@@ -15,6 +15,13 @@ Swift 5.0
 Xcode 10.2
 </pre>
 
+<b>To More Info</b>
+<pre>
+you can check these two links
+https://medium.com/@maher.santina90/how-to-create-cells-that-peek-on-the-sides-like-ios-11-app-store-ef4bb54c0c7d
+https://medium.com/@shaibalassiano/tutorial-horizontal-uicollectionview-with-paging-9421b479ee94
+</pre>
+
 <h1></h1>
 
 <h1></h1>
