@@ -19,9 +19,12 @@ Xcode 10.2
 <pre>
 you can check these two links
 </pre>
+## A description of what the project is for.
+* **How does it work?**
 
-#[How to create cells that peek on the sides like iOS 11 App Store](https://medium.com/@maher.santina90/how-to-create-cells-that-peek-on-the-sides-like-ios-11-app-store-ef4bb54c0c7d)
-#[Tutorial: Horizontal UICollectionView with paging](https://medium.com/@shaibalassiano/tutorial-horizontal-uicollectionview-with-paging-9421b479ee94)
+* **[How to create cells that peek on the sides like iOS 11 App Store](https://medium.com/@maher.santina90/how-to-create-cells-that-peek-on-the-sides-like-ios-11-app-store-ef4bb54c0c7d)**
+
+* **[Tutorial: Horizontal UICollectionView with paging](https://medium.com/@shaibalassiano/tutorial-horizontal-uicollectionview-with-paging-9421b479ee94)**
 
 
 <h1></h1>
