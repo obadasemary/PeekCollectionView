@@ -10,7 +10,8 @@ import UIKit
 
 private let peekCollectionViewCell = "PeekCollectionViewCell"
 
-class PeekViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+// side note: you don't need to conform to both (UICollectionViewDelegateFlowLayout, UICollectionViewDelegate) becuase UICollectionViewDelegateFlowLayout already inherits UICollectionViewDelegate
+class PeekViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var collectionView: UICollectionView!
 
@@ -20,11 +21,7 @@ class PeekViewController: UIViewController, UICollectionViewDataSource, UICollec
 
         static let cellSpacing: CGFloat = 20
         static let cellPeekWidth: CGFloat = 20
-        static let scrollThreshold: CGFloat = 50
     }
-
-    var itemWidth: CGFloat = 0
-    fileprivate var currentScrollOffset: CGPoint = CGPoint.zero
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +31,13 @@ class PeekViewController: UIViewController, UICollectionViewDataSource, UICollec
 
     func configureViews() {
 
+        // next line makes the snapping effect work exactly as we want, it controls the behavior of scrolling after the user lifts his finger so it looks native experience
+        collectionView.decelerationRate = .fast
+        
+        // our new calculations use collection view left content inset instead of sections insets
+        let sidePadding: CGFloat = Constants.cellSpacing + Constants.cellPeekWidth
+        collectionView.contentInset = .init(top: 0, left: sidePadding, bottom: 0, right: sidePadding)
+        
         collectionView.delegate = self
         collectionView.dataSource = self
 
@@ -69,7 +73,7 @@ class PeekViewController: UIViewController, UICollectionViewDataSource, UICollec
 
     func collectionView(_: UICollectionView, layout _: UICollectionViewLayout, sizeForItemAt _: IndexPath) -> CGSize {
 
-        itemWidth = max(0, collectionView.frame.size.width - 2 * (Constants.cellSpacing + Constants.cellPeekWidth))
+        let itemWidth = max(0, collectionView.frame.size.width - 2 * (Constants.cellSpacing + Constants.cellPeekWidth))
         return CGSize(width: itemWidth, height: collectionView.frame.size.height - 10.0)
     }
 
@@ -77,30 +81,6 @@ class PeekViewController: UIViewController, UICollectionViewDataSource, UICollec
 
         return Constants.cellSpacing
     }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-
-        let leftAndRightInsets = Constants.cellSpacing + Constants.cellPeekWidth
-        return UIEdgeInsets(top: 0, left: leftAndRightInsets, bottom: 0, right: leftAndRightInsets)
-    }
-
-    // MARK: - UIScrollView
-
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        
-        currentScrollOffset = scrollView.contentOffset
-    }
-
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-
-        let target = targetContentOffset.pointee
-        let currentScrollDistance = target.x - currentScrollOffset.x
-        let coefficent = Int(max(-1, min(currentScrollDistance / Constants.scrollThreshold, 1)))
-        let currentScrollIndex = Int(round(currentScrollOffset.x / itemWidth))
-        let adjacentItemIndex = currentScrollIndex + coefficent
-        let adjacentItemIndexFloat = CGFloat(adjacentItemIndex)
-        let adjacentItemOffsetX = adjacentItemIndexFloat * (itemWidth + Constants.cellSpacing)
-        targetContentOffset.pointee = CGPoint(x: adjacentItemOffsetX, y: target.y)
-    }
+    
 }
 
