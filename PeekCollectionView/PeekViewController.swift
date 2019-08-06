@@ -11,11 +11,11 @@ import UIKit
 private let peekCollectionViewCell = "PeekCollectionViewCell"
 
 // side note: you don't need to conform to both (UICollectionViewDelegateFlowLayout, UICollectionViewDelegate) becuase UICollectionViewDelegateFlowLayout already inherits UICollectionViewDelegate
-class PeekViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class PeekViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
 
-    var imageArray: [String] = ["snow0", "snow1", "snow2", "snow3", "snow4", "snow5"]
+    var imageArray: [String] = ["snow0", "snow1", "snow2", "snow3", "snow4", "snow5", "snow6", "snow7", "snow8", "snow9", "snow10", "snow11", "snow12"]
 
     enum Constants {
 
@@ -51,8 +51,9 @@ class PeekViewController: UIViewController, UICollectionViewDataSource, UICollec
         imageView.image = image
         self.navigationItem.titleView = imageView
     }
+}
 
-    // MARK: - UICollectionView
+extension PeekViewController: UICollectionViewDataSource {
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
 
@@ -70,6 +71,9 @@ class PeekViewController: UIViewController, UICollectionViewDataSource, UICollec
         cell.imageView.image = UIImage(named: imageArray[indexPath.row])
         return cell
     }
+}
+
+extension PeekViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_: UICollectionView, layout _: UICollectionViewLayout, sizeForItemAt _: IndexPath) -> CGSize {
 
@@ -81,6 +85,4 @@ class PeekViewController: UIViewController, UICollectionViewDataSource, UICollec
 
         return Constants.cellSpacing
     }
-    
 }
-
