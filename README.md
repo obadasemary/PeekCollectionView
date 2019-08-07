@@ -26,6 +26,10 @@ you can check these two links
 
 * **[Tutorial: Horizontal UICollectionView with paging](https://medium.com/@shaibalassiano/tutorial-horizontal-uicollectionview-with-paging-9421b479ee94)**
 
+* **[UICollectionView snap onto cell when scrolling horizontally](https://stackoverflow.com/questions/33855945/uicollectionview-snap-onto-cell-when-scrolling-horizontally)**
+
+* **[targetContentOffset(forProposedContentOffset:withScrollingVelocity:)](https://developer.apple.com/documentation/uikit/uicollectionviewlayout/1617729-targetcontentoffset)**
+
 
 <h1></h1>
 
